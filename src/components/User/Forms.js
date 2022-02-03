@@ -1,9 +1,9 @@
 import React from "react";
+// components
 import Login from "./Login";
 import Signup from "./Signup";
-// import Splash from "./Splash"; // leave it out for now
+// import Splash from "./Splash"; // put a good welcome message when user is logged in
 import "./User.css";
-
 // Bootstrap
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
@@ -21,9 +21,10 @@ function Forms({ setCurrentUser, currentUser }) {
 
         <Col>
           <Container>
-          <Row className="g-0 align-middle" id="full-row">&nbsp;</Row>
-          <Row className="g-0 align-middle" id="full-row">&nbsp;</Row>
-          <Row className="g-0 align-middle" id="full-row">&nbsp;</Row>
+          {/* leave some margin out from the header */}
+          {/* <Row className="g-0 align-middle" id="full-row">&nbsp;</Row> */}
+          {/* <Row className="g-0 align-middle" id="full-row">&nbsp;</Row> */}
+          {/* <Row className="g-0 align-middle" id="full-row">&nbsp;</Row> */}
           <Row className="g-0 align-middle" id="full-row">&nbsp;</Row>
             <Row className="g-0">
               <Col></Col>

@@ -9,36 +9,44 @@ function Header({ currentUser }) {
   return (
     <div>
       <Row id="header-row">
+
         <Col xs={5} id="header-wordmark">
           <h1>YUC-Company</h1>
         </Col>
+
         <Col xs={5}>
           <Nav fill activeKey="/home">
+            
             <Nav.Item>
               <Link to="/home" id="header-nav-link">
                 Home
               </Link>
             </Nav.Item>
+            
             <Nav.Item>
             <Link to="/company" id="header-nav-link">
                 Company
-              </Link>
+            </Link>
             </Nav.Item>
+
             <Nav.Item>
             <Link to="/add" id="header-nav-link">
                 Add
-              </Link>
+            </Link>
             </Nav.Item>
+
             <Nav.Item>
             <Link to="/schedule" id="header-nav-link">
                 Schedule
-              </Link>
+            </Link>
             </Nav.Item>
+
           </Nav>
         </Col>
 
         {/* put some cute cat profile for testing */}
         <Col xs={2} id="header-user">
+          {/* puts currentUser and setCurrentUser in app.js for better experience */}
           {currentUser.user ? (
             <>
               <Row>

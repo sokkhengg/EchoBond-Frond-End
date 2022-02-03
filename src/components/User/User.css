@@ -1,0 +1,40 @@
+#half-page {
+  background: #2E5B4F;
+}
+
+#full-row {
+--bs-gutter-x: 0rem !important;
+margin-right: 0px !important;
+margin-left: 0px !important;
+}
+
+#blank-row {
+  margin-top: 20%;
+}
+
+.nav-tabs {
+  border-color: #bfc2c1 !important;  
+}
+
+.nav-link:hover .nav-item:hover{
+  border-bottom: none !important;
+}
+
+.nav-link.active {
+  border-left: 1px solid #2E5B4F !important;
+  border-right: 1px solid #2E5B4F !important;
+  border-top: 1px solid #2E5B4F !important;
+  border-bottom: 1px solid #fff !important;
+  background-color: #2E5B4F !important;
+  color: #fff !important;
+}
+
+#login-button {
+  background-color: #64626f;
+  border-color: #64626f;
+}
+
+.white-text {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}

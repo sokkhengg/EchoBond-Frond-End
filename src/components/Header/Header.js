@@ -36,6 +36,8 @@ function Header({ currentUser }) {
             </Nav.Item>
           </Nav>
         </Col>
+
+        {/* put some cute cat profile for testing */}
         <Col xs={2} id="header-user">
           {currentUser.user ? (
             <>
@@ -44,8 +46,8 @@ function Header({ currentUser }) {
                   <p className="user-child">{currentUser.user.first_name}</p>
                   <img
                     className="user-child"
-                    src="test-profile.png"
-                    alt="profile pic"
+                    src="cute-profile.png"
+                    alt="cute-profile pic"
                     height="35px"
                   />
                 </div>

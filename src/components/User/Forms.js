@@ -1,7 +1,7 @@
 import React from "react";
 import Login from "./Login";
 import Signup from "./Signup";
-import Splash from "./Splash";
+// import Splash from "./Splash"; // leave it out for now
 import "./User.css";
 
 // Bootstrap
@@ -15,9 +15,9 @@ function Forms({ setCurrentUser, currentUser }) {
   return (
     <div style={{ height: "100vh" }}>
       <Row className="g-0 align-middle" id="full-row" style={{ height: "100vh" }} >
-        <Col id="half-page">
+        {/* <Col id="half-page">
           <Splash />
-        </Col>
+        </Col> */}
 
         <Col>
           <Container>

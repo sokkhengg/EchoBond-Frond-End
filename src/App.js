@@ -29,7 +29,7 @@ function App() {
 
       <Routes>
         <Route
-          path="/login"
+          path="/register"
           element={
             <Forms setCurrentUser={setCurrentUser} currentUser={currentUser} />
           }

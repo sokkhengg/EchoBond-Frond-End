@@ -1,7 +1,7 @@
 #header-nav-link {
-  background-color: #ffffff!important;
+  /* background-color: #78e431!important; */
   border: 0!important;
-  color: black!important;
+  color:#a1c4fd!important;
   font-size: 14px!important;
   margin-top: 8px;
 }
@@ -22,7 +22,7 @@
 
 #header-wordmark {
   padding-left: 65px;
-  color: #636f65;
+  color:  #a1c4fd;
 }
 
 .user-parent {

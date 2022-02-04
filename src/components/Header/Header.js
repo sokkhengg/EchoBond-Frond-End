@@ -61,8 +61,8 @@ function Header({ currentUser }) {
               </Row>
             </>
           ) : <>
-           <Link to="/login" id="header-nav-link">
-                Login
+           <Link to="/register" id="header-nav-link">
+                Register
               </Link></>}
         </Col>
       </Row>

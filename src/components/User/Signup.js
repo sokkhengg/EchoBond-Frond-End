@@ -2,17 +2,17 @@ import React from "react";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
+import { useNavigate } from 'react-router-dom';
+
 
 function Signup({ setCurrentUser, currentUser }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+
+  let navigate = useNavigate();
 
   function handleSignupSubmit(e) {
     e.preventDefault();
@@ -26,19 +26,18 @@ function Signup({ setCurrentUser, currentUser }) {
         last_name: lastName,
         username: username,
         password: password,
-      }),
+      })
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
           console.log(user);
           setError("");
-          setSuccess(user);
           setCurrentUser(user);
+          navigate("/")
         });
       } else {
         r.json().then((err) => {
             setCurrentUser({})
-            setSuccess("");
             setError(err);
         });
       }
@@ -47,24 +46,7 @@ function Signup({ setCurrentUser, currentUser }) {
 
   return (
     <div>
-      <Form onSubmit={handleSignupSubmit}>
-        <Form.Group className="mb-3" controlId="firstname">
-          <Form.Control
-            type="text"
-            placeholder="First name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="lastname">
-          <Form.Control
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </Form.Group>
+      <Form onSubmit={handleSignupSubmit} id="signup-form">
 
         <Form.Group className="mb-3" controlId="signup-username">
           <Form.Control
@@ -84,7 +66,7 @@ function Signup({ setCurrentUser, currentUser }) {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" id="signup-button">
+        <Button variant="primary" type="submit" className="standard-button">
           Sign up
         </Button>
       </Form>

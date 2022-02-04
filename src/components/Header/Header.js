@@ -46,16 +46,15 @@ function Header({ currentUser }) {
 
         {/* put some cute cat profile for testing */}
         <Col xs={2} id="header-user">
-          {/* puts currentUser and setCurrentUser in app.js for better experience */}
           {currentUser.user ? (
             <>
               <Row>
                 <div className="user-parent">
-                  <p className="user-child">{currentUser.user.first_name}</p>
+                  <p className="user-child">{currentUser.user.username}</p>
                   <img
                     className="user-child"
                     src="cute-profile.png"
-                    alt="cute-profile pic"
+                    alt="profile pic"
                     height="35px"
                   />
                 </div>

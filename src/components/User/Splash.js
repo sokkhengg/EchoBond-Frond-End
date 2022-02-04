@@ -9,8 +9,8 @@ function Splash() {
           <Row className="g-0 align-middle" id="full-row">&nbsp;</Row>
               <Col></Col>
               <Col xs={10} className="text-center align-middle">
-                  <h1 className="white-text">YUC-Company</h1>
-                  <h4 className="white-text">YUC-Company and make connection with people who looking for the the same company</h4>
+                  <h1 className="white-text">Welcome Future Talent</h1>
+                  <h4 className="white-text">Checking what company you like and make connection with people who looking for the the same company</h4>
               </Col>
               <Col></Col>
           </Row>

@@ -1,23 +1,41 @@
-import './App.css';
-import { useState } from 'react';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header/Header";
+import Forms from "./components/User/Forms";
 import { Routes, Route, Link } from "react-router-dom";
-// components
-import Header from './components/Header/Header';
-import Forms from './components/User/Forms';
+import { useEffect, useState } from "react";
 
 function App() {
-  const [currentUser, setCurrentUser] = useState({})
+  const [currentUser, setCurrentUser] = useState({});
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      fetch(`http://localhost:3000/auto_login`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+        .then((resp) => resp.json())
+        .then((data) => {
+          setCurrentUser(data);
+        });
+    }
+  }, []);
 
   return (
-    <div className="App">
-        <Header currentUser={currentUser} />
-        <Routes>
-        <Route path="/login" element={<Forms setCurrentUser={setCurrentUser} currentUser={currentUser} />} />
-        {/* <Route path="/search" element={<Search setCurrentUser={setCurrentUser} currentUser={currentUser} />} /> */}
-        {/* <Route path="/podcasts/:id" element={<PodcastDetail currentUser={currentUser} />} */}
+    <div className="App g-0">
+      <Header currentUser={currentUser} />
+
+      <Routes>
+        <Route
+          path="/login"
+          element={
+            <Forms setCurrentUser={setCurrentUser} currentUser={currentUser} />
+          }
+        />
         
       </Routes>
-
     </div>
   );
 }

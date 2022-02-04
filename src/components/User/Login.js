@@ -76,7 +76,7 @@ function Login({ setCurrentUser, currentUser }) {
                   onChange={(e) => setUsername(e.target.value)}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Please enter a username.
+                  Username required.
                 </Form.Control.Feedback>
               </Form.Group>
 
@@ -89,7 +89,7 @@ function Login({ setCurrentUser, currentUser }) {
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Please enter your password.
+                  Password required.
                 </Form.Control.Feedback>
               </Form.Group>
 
@@ -103,7 +103,7 @@ function Login({ setCurrentUser, currentUser }) {
       </Container>
 
       {error ? (
-        <p>Incorrect username or password. Please try again or sign up.</p>
+        <p>Try again to login.</p>
       ) : null}
 
       {currentUser.user ? (

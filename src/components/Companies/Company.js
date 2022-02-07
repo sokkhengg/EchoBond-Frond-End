@@ -1,27 +1,27 @@
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import Search from './Search';
 
-function Company({parks, viewCampgrounds, viewToDos}) {
-    // const [searchField, setSearchField] = useState("");
+function Company({companies, viewCampgrounds, viewToDos}) {
+    const [searchField, setSearchField] = useState("");
 
-    // const filteredParks = parks.filter(
-    //     (park) => {
-    //     return (
-    //     park
-    //     .fullName
-    //     .toLowerCase()
-    //     .includes(searchField.toLowerCase())
-    //     )}
-    // )
+    const filteredCompanies = companies.filter(
+        (company) => {
+        return (
+        company
+        .name
+        .toLowerCase()
+        .includes(searchField.toLowerCase())
+        )}
+    )
     
-    // function handleChange(e) {
-    //     setSearchField(e.target.value)
-    //     console.log(e.target.value)
-    // }
+    function handleChange(e) {
+        setSearchField(e.target.value)
+        console.log(e.target.value)
+    }
     
     return (
         <div className="page-body">
-            {/* <img className="parks-bg" src={rmnp} />
             <div className="search">
                 <FaSearch />
                 <input
@@ -31,14 +31,13 @@ function Company({parks, viewCampgrounds, viewToDos}) {
                 />
             </div>
             <div className="results">
-                <SearchParks filteredParks={filteredParks} viewCampgrounds={viewCampgrounds} viewToDos={viewToDos}/>    
-            </div> */}
-<p>hi</p>
-            {/* <hr /> */}
+                <Search filteredCompanies={filteredCompanies} viewCampgrounds={viewCampgrounds} viewToDos={viewToDos}/>    
+            </div>
+            <hr />
 
-        {/* <div className="parks-page">
-                {parks.map((park) => 
-                    <ParkCard key={park.id} park={park} viewCampgrounds={viewCampgrounds} viewToDos={viewToDos} />
+        {/* <div className="companies-page">
+                {companies.map((company) => 
+                    <CompanyCard key={company.id} company={company} viewCampgrounds={viewCampgrounds} viewToDos={viewToDos} />
                 )}
                 </div>     */}
         </div>

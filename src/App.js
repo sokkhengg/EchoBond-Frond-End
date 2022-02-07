@@ -10,8 +10,10 @@ import Company from "./components/Companies/Company";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
+  const [companies, setCompanies] = useState([])
 
   useEffect(() => {
+    // debugger
     const token = localStorage.getItem("token");
     if (token) {
       fetch(`http://localhost:3000/auto_login`, {
@@ -26,6 +28,16 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    // debugger
+      fetch(`http://localhost:3000/companies`)
+      .then((resp) => resp.json())
+      .then((data) => {
+        setCompanies(data);
+      });
+    }
+    , []);
+
   return (
     <div className="App g-0">
       <Header currentUser={currentUser} />
@@ -37,9 +49,10 @@ function App() {
             <Forms setCurrentUser={setCurrentUser} currentUser={currentUser} />
           }
         />
+      <Route path="/" element={<Home currentUser={currentUser} />} />
 
       <Route path="/home" element={<Home currentUser={currentUser} />} />
-      <Route path="/company" element={<Company currentUser={currentUser} />} />
+      <Route path="/company" element={<Company currentUser={currentUser} companies={companies} />} />
 
         
       </Routes>

@@ -2,7 +2,7 @@
 
 # yuc-company or Your Upcoming Company
 
-put a link to backend
+Back-end repository, _[here](https://github.com/sokkhengg/back-end-5)_.
 
 # User Stories
 

@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Forms from "./components/User/Forms";
 import { Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Search from "./components/Search/Search";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -34,6 +35,9 @@ function App() {
             <Forms setCurrentUser={setCurrentUser} currentUser={currentUser} />
           }
         />
+
+      <Route path="/search" element={<Search currentUser={currentUser} />} />
+
         
       </Routes>
     </div>

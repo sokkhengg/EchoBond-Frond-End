@@ -5,6 +5,8 @@ import Forms from "./components/User/Forms";
 import { Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Search from "./components/Search/Search";
+import Home from "./components/Home/Home";
+import Company from "./components/Companies/Company";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -36,7 +38,8 @@ function App() {
           }
         />
 
-      <Route path="/search" element={<Search currentUser={currentUser} />} />
+      <Route path="/home" element={<Home currentUser={currentUser} />} />
+      <Route path="/company" element={<Company currentUser={currentUser} />} />
 
         
       </Routes>

@@ -24,7 +24,7 @@ function Header({ currentUser }) {
             </Nav.Item>
             
             <Nav.Item>
-            <Link to="/company" id="header-nav-link">
+            <Link to="/companies" id="header-nav-link">
                 Company
             </Link>
             </Nav.Item>

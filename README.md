@@ -22,3 +22,9 @@ Ask a user I can
 ![My Data Relationships](public/drawSQL-yuc-company-diagram.png)
 
 # Demo wireframe design
+
+# note on new technology implemented
+
+* HasRouter support single page deployment on github 
+
+* live chat using: redux thunk for asynchronous posting. "The most common use case for Redux Thunk is for communicating asynchronously with an external API to retrieve or save data. Redux Thunk makes it easy to dispatch actions that follow the lifecycle of a request to an external API". it will update the page without interference. The other user will have to refresh the page manually to updated the new update api.

@@ -17,13 +17,13 @@ class JobSeekersHome extends Component {
     componentDidMount() {
         let myToken = localStorage.getItem('token');
         console.log(myToken)
-        return fetch('https://culturefitapp.herokuapp.com/quizzes', {
+        return fetch('http://localhost:3000/quizzes', {
             method: "get",
             headers: {
-                "Access-Control-Allow-Headers": "Authorization",
-                "Authorization": `Bearer ${myToken}`,
+                Authorization: `Bearer ${myToken}`,
                 "Content-Type": "application/json",
-                "Accept": "application/json"
+                // "Access-Control-Allow-Headers": "Authorization",
+                // "Accept": "application/json"
             }
         }).then((response) => response.json())
         .then(data => {

@@ -47,9 +47,10 @@ class Login extends Component {
   submitToServer = () => {
     const { history } = this.props;
 
-    return fetch("https://culturefitapp.herokuapp.com/login", {
+    return fetch("http://localhost:3000/login", {
       method: "post",
       headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

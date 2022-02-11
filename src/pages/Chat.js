@@ -62,7 +62,7 @@ class Chat extends Component {
                 <Navigation />
                 <div>
                     <div className="chatContainer">
-                        <h2>Networking forums</h2>
+                        <h2>Leave your reviews and comments here:</h2>
                     </div>
                     <div>
                     <ChatContainer messages={messages}/>

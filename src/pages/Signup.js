@@ -78,9 +78,10 @@ class Signup extends Component {
   submitToServer = () => {
     const { history } = this.props;
 
-    return fetch("https://culturefitapp.herokuapp.com/users", {
+    return fetch("http://localhost:3000/users", {
       method: "post",
       headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -144,6 +145,8 @@ class Signup extends Component {
               <label htmlFor="job_seeker">Job Seeker</label>
 
               <br />
+
+              <h4>Fill in input fields</h4>
 
               <input
                 type="text"

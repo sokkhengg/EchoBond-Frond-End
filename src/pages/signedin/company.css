@@ -1,0 +1,97 @@
+.createQuizContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.createQuizContainer h2 {
+  margin: 10px 0px 20px 0px;
+  text-align: center;
+  font-size: 30px;
+  color: #96cbd2;
+}
+
+.createQuizContainer .createQuizInner {
+  margin-top: 20px;
+  max-width: 95vw;
+  min-width: 75%;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 20px 20px 20px;
+}
+
+.createQuizContainer .createQuizInner input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  display: block;
+  margin: 5px 0px 2px 0px;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  border: solid 1px #c6c6c6;
+  background-color: white;
+  padding: 5px 5px 5px 5px;
+}
+
+.createQuizContainer .createQuizInner .answers {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.createQuizContainer .createQuizInner .answers .attribute {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.createQuizContainer .createQuizInner button.addBtn {
+  font-size: 18px;
+  text-align: center;
+  background-color: #96cbd2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  margin: 20px 0px 10px 0px;
+  width: 100%;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+.createQuizContainer .createQuizInner button.addBtn:hover {
+  background-color: #7cb1c5;
+}
+
+.createQuizContainer .createQuizInner button.submitBtn {
+  font-size: 18px;
+  text-align: center;
+  background-color: #e7ba82;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  margin: 20px 0px 10px 0px;
+  width: 100%;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+.createQuizContainer .createQuizInner button.submitBtn:hover {
+  background-color: #d6a364;
+}
+/*# sourceMappingURL=company.css.map */

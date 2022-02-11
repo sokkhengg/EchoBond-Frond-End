@@ -16,13 +16,6 @@ Ask a user I can
 * log in and log out.
 * After login user can add a company and write reviews on existing company.
 
-
-# Database relationship diagram
-
-![My Data Relationships](public/drawSQL-yuc-company-diagram.png)
-
-# Demo wireframe design
-
 # note on new technology implemented
 
 * HasRouter support single page deployment on github 

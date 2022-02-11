@@ -46,7 +46,7 @@ class Navigation extends Component {
                     </div>
                     :
                     <div className="navElement">
-                        <span className="signupInDivider">Welcome { this.props.loginReducer.name } </span>
+                        <span className="signupInDivider">{ this.props.loginReducer.name } </span>
                         <span className="signupInDivider"> | </span>
                         <span className="signupInDivider"><Link to="/">Home</Link> </span>
                         <span className="signupInDivider"> | </span>

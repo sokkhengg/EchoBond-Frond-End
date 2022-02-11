@@ -15,13 +15,13 @@ class UserQuiz extends Component {
         };
     }
     componentDidMount() {
-        return fetch(`https://culturefitapp.herokuapp.com/quizzes/${this.props.currentQuiz}`, {
+        return fetch(`http://localhost:3000/quizzes/${this.props.currentQuiz}`, {
             method: "get",
             headers: {
-                "Access-Control-Allow-Headers": "Authorization",
-                "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
                 "Content-Type": "application/json",
-                "Accept": "application/json"
+                // "Access-Control-Allow-Headers": "Authorization",
+                // "Accept": "application/json"
             }
         }).then((response) => response.json())
         .then(data => {
@@ -66,13 +66,13 @@ class UserQuiz extends Component {
               quizAttributes: userScore
           }, () => { console.log( this.state )})
           console.log(this.state.quizAttributes)
-            return fetch('https://culturefitapp.herokuapp.com/user_attributes', {
+            return fetch('http://localhost:3000/user_attributes', {
                 method: "post",
                 headers: {
-                    "Access-Control-Allow-Headers": "Authorization",
-                    "Authorization": `Bearer ${localStorage.getItem('token')}`,
                     "Content-Type": "application/json",
-                    "Accept": "application/json"
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    // "Access-Control-Allow-Headers": "Authorization",
+                    // "Accept": "application/json"
                 },
                 body: JSON.stringify({
                     name: this.props.loginReducer.name,

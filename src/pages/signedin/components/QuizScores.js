@@ -11,13 +11,13 @@ class QuizScores extends Component {
     }
 
     componentDidMount() {
-        return fetch(`http://127.0.0.1:3001/user_attributes/${this.state.currentQuiz}`, {
+        return fetch(`http://localhost:3000/${this.state.currentQuiz}`, {
             method: "get",
             headers: {
-                "Access-Control-Allow-Headers": "Authorization",
-                "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
                 "Content-Type": "application/json",
-                "Accept": "application/json"
+                // "Access-Control-Allow-Headers": "Authorization",
+                // "Accept": "application/json"
             }
         }).then((response) => response.json())
         .then(data => {

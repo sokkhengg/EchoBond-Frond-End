@@ -3,13 +3,13 @@ export function submitPost(user, message) {
     console.log(user, message)
     return (dispatch) => {
       dispatch({ type: "START_ADDING_POST_REQUEST" });
-      fetch("https://culturefitapp.herokuapp.com/messages", {
+      fetch("http://localhost:3000/messages", {
         method: "post",
         headers: {
-            "Access-Control-Allow-Headers": "Authorization",
-            "Authorization": `Bearer ${localStorage.getItem('token')}`,
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            // "Access-Control-Allow-Headers": "Authorization",
             "Content-Type": "application/json",
-            "Accept": "application/json"
+            // "Accept": "application/json"
         },
         body: JSON.stringify({
             user: user, 

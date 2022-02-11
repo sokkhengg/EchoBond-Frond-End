@@ -40,13 +40,13 @@ class CompanyHome extends Component {
     }
 
     componentDidMount() {
-        return fetch('https://culturefitapp.herokuapp.com/user_attributes/unique', {
+        return fetch('http://localhost:3000/user_attributes/unique', {
             method: "get",
             headers: {
-                "Access-Control-Allow-Headers": "Authorization",
-                "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
                 "Content-Type": "application/json",
-                "Accept": "application/json"
+                // "Access-Control-Allow-Headers": "Authorization",
+                // "Accept": "application/json"
             }
         }).then((response) => response.json())
         .then(data => {
@@ -164,13 +164,13 @@ class CompanyHome extends Component {
         }
         event.preventDefault();
         //console.log("Click")
-        return fetch('https://culturefitapp.herokuapp.com/quizzes', {
+        return fetch('http://localhost:3000/quizzes', {
             method: "post",
             headers: {
-                "Access-Control-Allow-Headers": "Authorization",
-                "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
                 "Content-Type": "application/json",
-                "Accept": "application/json"
+                // "Access-Control-Allow-Headers": "Authorization",
+                // "Accept": "application/json"
             },
             body: JSON.stringify(submitToServer)
         }).then((response) => {

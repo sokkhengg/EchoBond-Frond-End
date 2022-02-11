@@ -1,52 +1,34 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/Header/Header";
-import Forms from "./components/User/Forms";
-import { Routes, Route, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Home from "./components/Home/Home";
-import Companies from "./components/Companies/Companies";
+import { connect } from 'react-redux';
+import {HashRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import Chat from './pages/Chat'
 
-function App() {
-  const [currentUser, setCurrentUser] = useState({});
+//<Router basename={process.env.PUBLIC_URL}> for deployment
 
-  // useEffect(() => {
-  //   // debugger
-  //   const token = localStorage.getItem("token");
-  //   if (token) {
-  //     fetch(`http://localhost:3000/auto_login`, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     })
-  //       .then((resp) => resp.json())
-  //       .then((data) => {
-  //         setCurrentUser(data);
-  //       });
-  //   }
-  // }, []);
-
-  
-
+function App(props) {
 
   return (
-    <div className="App g-0">
-      <Header currentUser={currentUser} />
-
-      <Routes>
-        <Route
-          path="/register"
-          element={
-            <Forms setCurrentUser={setCurrentUser} currentUser={currentUser} />
-          }
-        />
-      <Route path="/" element={<Home currentUser={currentUser} />} />
-      <Route path="/companies" element={<Companies currentUser={currentUser} />} />
-
-        
-      </Routes>
+    <div className="App">
+      <Router>
+        <Switch>
+        <>
+          <Route exact path={"/"} component={Home} />
+          <Route exact path={"/signup"} component={Signup} />
+          <Route exact path={"/signin"} component={Login} />
+          <Route exact path={"/chat"} component={Chat} />
+        </>
+        </Switch>
+      </Router>
     </div>
   );
 }
 
-export default App;
+const MSP = (globalState) => {
+  //debugger
+  //console.log('FROM APP', globalState)
+  return globalState
+}
+
+export default connect(MSP)(App);

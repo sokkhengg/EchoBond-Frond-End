@@ -1,0 +1,27 @@
+.aboutSectionFlex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+}
+
+.aboutSectionFlex .aboutImage {
+  max-width: 28%;
+}
+
+.aboutSectionFlex .aboutImage .aboutTitle {
+  font-weight: bolder;
+  margin: 20px 0px 20px 0px;
+}
+
+.aboutSectionFlex .aboutImage img {
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=about.css.map */

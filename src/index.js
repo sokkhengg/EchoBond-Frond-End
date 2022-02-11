@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import configureStore from './store';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
+
+const store = configureStore()
+const token = localStorage.getItem('token');
+if (token) {
+  store.dispatch({ type: "LOGIN",
+                  loggedIn: true, 
+                  un: localStorage.getItem('user'),
+                  ut: localStorage.getItem('userType') });
+}
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Provider store={store}>
     <App />
-  </BrowserRouter>,
+  </Provider>,
   document.getElementById('root')
 );
 

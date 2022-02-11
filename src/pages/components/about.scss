@@ -1,0 +1,18 @@
+.aboutSectionFlex {
+    width: 100%;
+    display: flex;
+    -ms-flex-direction: row;
+    justify-content: space-around;
+    flex-direction: row;
+    .aboutImage {
+        max-width: 28%;
+        .aboutTitle {
+            font-weight: bolder;
+            margin: 20px 0px 20px 0px;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

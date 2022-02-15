@@ -37,7 +37,7 @@ class Signup extends Component {
       this.setState({
         signupError: (
           <div style={{ color: "red", marginBottom: "15px" }}>
-            *Passwords must match to continue
+            *comfirm your password
           </div>
         ),
       });

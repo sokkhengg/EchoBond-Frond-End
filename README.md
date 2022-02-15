@@ -8,13 +8,12 @@ Back-end repository, _[here](https://github.com/sokkhengg/back-end-5)_.
 
 Ask a user I can
 
-* See a list of all the companies that I want to work for.
-* Add in a new company that I am interested in.
-* Write a review for each company.
-* Set a schedule to learn more about company later.
-* See a list of scheduled company inside calendar page.
+* chat with other users and company.
+* taking the quiz.
 * log in and log out.
-* After login user can add a company and write reviews on existing company.
+* Only admin can access create quiz page
+* Only users can take the quiz
+* Admin can create a quiz for user to take.
 
 # note on new technology implemented
 

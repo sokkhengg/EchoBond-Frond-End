@@ -7,8 +7,8 @@ export function submitPost(user, message) {
         method: "post",
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
-            // "Access-Control-Allow-Headers": "Authorization",
             "Content-Type": "application/json",
+            // "Access-Control-Allow-Headers": "Authorization",
             // "Accept": "application/json"
         },
         body: JSON.stringify({
@@ -20,3 +20,4 @@ export function submitPost(user, message) {
         .then((messages) => dispatch({ type: "ADD_POST", messages }));
     };
   }
+  

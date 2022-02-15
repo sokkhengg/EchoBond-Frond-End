@@ -68,7 +68,7 @@ class Signup extends Component {
       this.setState({
         signupError: (
           <div style={{ color: "red", marginBottom: "15px" }}>
-            *All fields must be filled out, and passwords must match
+            *Fill out the form to sign up
           </div>
         ),
       });
@@ -134,7 +134,7 @@ class Signup extends Component {
                 value="company"
                 onChange={this.handleChange}
               />
-              <label htmlFor="company">Company</label>
+              <label htmlFor="company">Admin</label>
               <input
                 type="radio"
                 id="job_seeker"
@@ -142,11 +142,13 @@ class Signup extends Component {
                 value="job_seeker"
                 onChange={this.handleChange}
               />
-              <label htmlFor="job_seeker">Job Seeker</label>
+              <label htmlFor="job_seeker">User</label>
 
               <br />
 
-              <h4>Fill in input fields</h4>
+              
+
+              {/* <h4>Fill in input fields</h4> */}
 
               <input
                 type="text"

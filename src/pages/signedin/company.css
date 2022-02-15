@@ -22,14 +22,14 @@
   margin: 10px 0px 20px 0px;
   text-align: center;
   font-size: 30px;
-  color: #96cbd2;
+  color: #8B8000;
 }
 
 .createQuizContainer .createQuizInner {
   margin-top: 20px;
   max-width: 95vw;
   min-width: 75%;
-  background-color: white;
+  /* background-color: white; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px 20px 20px 20px;
@@ -62,36 +62,36 @@
 .createQuizContainer .createQuizInner button.addBtn {
   font-size: 18px;
   text-align: center;
-  background-color: #96cbd2;
+  background-color: #8B8000;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 7px;
   padding: 10px 10px 10px 10px;
   margin: 20px 0px 10px 0px;
-  width: 100%;
+  width: 50%;
   -webkit-transition: background-color .5s ease;
   transition: background-color .5s ease;
 }
 
 .createQuizContainer .createQuizInner button.addBtn:hover {
-  background-color: #7cb1c5;
+  background-color: #00FF00;
 }
 
 .createQuizContainer .createQuizInner button.submitBtn {
   font-size: 18px;
   text-align: center;
-  background-color: #e7ba82;
+  background-color: #8B8000;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 7px;
   padding: 10px 10px 10px 10px;
   margin: 20px 0px 10px 0px;
-  width: 100%;
+  width: 50%;
   -webkit-transition: background-color .5s ease;
   transition: background-color .5s ease;
 }
 
 .createQuizContainer .createQuizInner button.submitBtn:hover {
-  background-color: #d6a364;
+  background-color: #00FF00;
 }
 /*# sourceMappingURL=company.css.map */

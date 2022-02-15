@@ -233,29 +233,29 @@ class CompanyHome extends Component {
         const quizData = this.state.questions.map((quest, index) => {
             return (
                 <div key={index}>
-                    <div>
+                    {/* <div>
                         <label>Question:</label>
-                    </div>
+                    </div> */}
                     <div>
-                        <input onChange={this.questionHandleChange(index)} placeholder="example: 'Which setting would you feel most comfortable in?'"/>
+                        <input onChange={this.questionHandleChange(index)} placeholder="Question"/>
                     </div>
                     
                     {
                         quest.answers.map((answ, aindex) => {
                             return (
                                 <div className="answers" key={aindex}> 
-                                    <div>
+                                    {/* <div>
                                         <label>Answer:</label>
-                                    </div>
+                                    </div> */}
                                     <div>
-                                        <input onChange={this.answerHandleChange(index, aindex)} placeholder="example: 'A nerf gun fight'"/>
+                                        <input onChange={this.answerHandleChange(index, aindex)} placeholder="Answer"/>
                                     </div>
                                     <div className="attribute">
-                                        <div>
+                                        {/* <div>
                                             <label>Answer Attribute:</label>
-                                        </div>
+                                        </div> */}
                                         <div>
-                                            <input onChange={this.attributeHandleChange(index, aindex)} placeholder="example: 'Outgoing'"/>
+                                            <input onChange={this.attributeHandleChange(index, aindex)} placeholder="Answer Attribute"/>
                                         </div>
                                     </div>
                                 </div>
@@ -292,14 +292,14 @@ class CompanyHome extends Component {
                         {
                             this.state.quizSubmitted === false ? 
                             <div className="createQuizInner">
-                                <h2>Create Survey</h2>
+                                {/* <h2>Add a quiz</h2> */}
                                 <div>
                                 <div>
-                                    <div>
+                                    {/* <div>
                                         <label>Survey Title:</label>
-                                    </div>
+                                    </div> */}
                                     <div>
-                                        <input onChange={this.titleHandleChange()} placeholder="example: Personality Survey"/>
+                                        <input onChange={this.titleHandleChange()} placeholder="Quiz Title"/>
                                     </div>
                                 </div>
                                 {quizData}
@@ -323,7 +323,7 @@ class CompanyHome extends Component {
                             {
                                 !!this.state.viewQuizzes ?
                                     <div className="quizNames">
-                                        <div className="selectQuiz">Choose a quiz to View the Results</div>
+                                        <div className="selectQuiz">View the Results</div>
                                         {/*<QuizContainer quiz={uniqueQuizzes} />*/}
                                     </div>
                                 :

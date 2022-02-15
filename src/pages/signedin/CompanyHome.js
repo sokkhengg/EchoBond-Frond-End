@@ -176,7 +176,7 @@ class CompanyHome extends Component {
         }).then((response) => {
             this.setState({
                 username: this.props.loginReducer.name,
-                formData: <div style={{ color: "black", marginBottom: "15px", textAlign: "center" }}>Form has been submitted</div>,
+                formData: <div style={{ color: "black", marginBottom: "15px", textAlign: "center" }}>Quiz submitted</div>,
                 quizSubmitted: true,
                 quizTitle: "",
                 questions: [
@@ -323,7 +323,7 @@ class CompanyHome extends Component {
                             {
                                 !!this.state.viewQuizzes ?
                                     <div className="quizNames">
-                                        <div className="selectQuiz">View the Results</div>
+                                        <div className="selectQuiz">User's Results</div>
                                         {/*<QuizContainer quiz={uniqueQuizzes} />*/}
                                     </div>
                                 :

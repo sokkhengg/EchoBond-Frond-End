@@ -4,18 +4,26 @@ import Navigation from "../components/Navigation";
 import { getPosts } from "../actions/getPosts.js"
 import { submitPost } from "../actions/submitPost.js"
 import ChatContainer from "./components/chatContainer.js"
-import './components/chat.css'
+import './components/ChatStyle/chat.css'
 
 
 class Chat extends Component {
     constructor(props) {
+        /**
+         * The state of the component. 
+         * @param messages - The messages to display in the component. 
+         * @param likeInput - The number of likes the user has given the page. 
+         */
         super()
         this.state={
             messages: "",
-            likeInput: 0
+            likeInput: 0 //v1.1
         }
     }
 
+    /**
+     * This function is called when the component is mounted. It calls the getPosts function from the redux store.
+     */
     componentDidMount() {
         console.log("a")
         this.props.getPosts()
@@ -62,11 +70,9 @@ class Chat extends Component {
                 <Navigation />
                 <div>
                     <div className="chatContainer">
-                        <h2>Forum</h2>
                     </div>
                     <div>
                     <ChatContainer messages={messages}/>
-                    {/*messages*/}
                     </div>
                     <div>
                         <div className="chatContainer">

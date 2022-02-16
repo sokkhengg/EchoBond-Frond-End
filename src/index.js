@@ -1,3 +1,6 @@
+/**
+ * The main entry point for the application.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -9,6 +12,10 @@ import reportWebVitals from './reportWebVitals';
 
 const store = configureStore()
 const token = localStorage.getItem('token');
+/**
+ * If the user is logged in, dispatch a login action.
+ * @param token - the token to check for validity.
+ */
 if (token) {
   store.dispatch({ type: "LOGIN",
                   loggedIn: true, 

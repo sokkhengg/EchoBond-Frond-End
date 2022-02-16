@@ -44,8 +44,9 @@ class Login extends Component {
     }
   };
 
+  // using function inside a class function instead of using useEffect inside functional component
   submitToServer = () => {
-    const { history } = this.props;
+    const { history } = this.props; 
 
     return fetch("http://localhost:3000/login", {
       method: "post",
@@ -66,7 +67,7 @@ class Login extends Component {
         console.log(data)
         if (data.user.name === this.state.name) {
           this.props.auth(this.state.name, data.user.user_type);
-          localStorage.setItem("token", data.jwt);
+          localStorage.setItem("token", data.jwt); //Login successful, dispatch redux action to update redux store with user data.
           localStorage.setItem("user", this.state.name);
           localStorage.setItem("userType", data.user.user_type);
           console.log(this.props.loginReducer);

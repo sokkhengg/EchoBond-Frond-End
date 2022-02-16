@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (state = { loggedIn: false, name: "", userType: "" }, action) => {
     switch (action.type) {
         case 'LOGIN':

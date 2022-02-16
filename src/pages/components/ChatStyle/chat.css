@@ -19,14 +19,14 @@
 }
 
 .chatContainer .innerContainer {
-  width: 500px;
-  background-color: white;
+  width: 700px;
+  background-color: #FFDD3C;
   padding: 20px 20px 20px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   /* border-style: solid; */
-  border-width: 20px 10px 20px 10px;
-  border-radius: 5%;
+  /* border-width: 20px 10px 20px 10px; */
+  border-radius: 7%;
   /* border-color: #e7ba82; */
 }
 

@@ -1,18 +1,18 @@
 .aboutSectionFlex {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  /* width: 100%; */
+  /* display: -webkit-box; */
+  /* display: -ms-flexbox; */
   display: flex;
   -ms-flex-direction: row;
-  -ms-flex-pack: distribute;
+  /* -ms-flex-pack: distribute; */
       justify-content: space-around;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+  /* -webkit-box-orient: horizontal; */
+  /* -webkit-box-direction: normal; */
           flex-direction: row;
 }
 
 .aboutSectionFlex .aboutImage {
-  max-width: 28%;
+  max-width: 30%;
 }
 
 .aboutSectionFlex .aboutImage .aboutTitle {

@@ -1,3 +1,7 @@
+/**
+ * Gets all the posts from the server and dispatches them to the reducer.
+ * @returns None
+ */
 export function getPosts() {
   console.log("c")
     return (dispatch) => {

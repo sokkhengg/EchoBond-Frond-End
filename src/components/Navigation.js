@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './navigation.css'
+import '../components/NavigationStyle/navigation.css'
 import { Link } from 'react-router-dom';
-import { logoutAction } from '../actions/loginAction'
+import { logoutAction } from '../actions/logoutAction'
 
 class Navigation extends Component {
     constructor(props) {
@@ -33,21 +33,20 @@ class Navigation extends Component {
         return(
             
             <nav className="navBarFlexContainer">
-                <Link to="/"><div className="navLogo"><span className="cultureLogo">YUC</span><span className="fitLogo"></span></div></Link>
+                <Link to="/"><div className="navLogo"><span className="Logo">YUC</span><span className="fitLogo"></span></div></Link>
+
                 <div className="navBarInnerContainer">
 
                 {
                     !this.props.loginReducer.loggedIn ?
                     <div className="navElement">
-                        
-                        {/* <Link to="/signup">Sign up</Link> */}
-                        {/* <span className="signupInDivider"> | </span> */}
                         <Link to="/signin">Register</Link>
                     </div>
                     :
                     <div className="navElement">
-                        <span className="signupInDivider">{ this.props.loginReducer.name } </span>
+                        <span className="signupInDivider">User | { this.props.loginReducer.name } </span>
                         <span className="signupInDivider"> | </span>
+                        <br/>
                         <span className="signupInDivider"><Link to="/">Home</Link> </span>
                         <span className="signupInDivider"> | </span>
                         <span className="signupInDivider"><Link to="/chat">Chat</Link> </span>
@@ -68,6 +67,9 @@ const MSP = (globalState) => {
     return globalState
 }
 
+/**
+ * A redux action that logs the user out.
+ */
 const MDP = (dispatch) => {
     return {
         auth: () => dispatch(logoutAction())
@@ -77,5 +79,5 @@ const MDP = (dispatch) => {
 export default connect(MSP, MDP)(Navigation);
 
 /*
-//In order to test on github pages links must look like /culturefit-front/#/
+//In order to test on github pages links must look like /name-name/#/
 */

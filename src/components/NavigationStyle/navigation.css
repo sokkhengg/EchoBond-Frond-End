@@ -11,7 +11,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #811717;
+  background-color: rgba(36, 45, 59, 0.1);
   -webkit-box-shadow: 0px 3px 4.85px 0.15px rgba(36, 45, 59, 0.1);
           box-shadow: 0px 3px 4.85px 0.15px rgba(36, 45, 59, 0.1);
   position: -webkit-sticky;
@@ -25,14 +25,14 @@
 
 .navBarFlexContainer a .navLogo {
   padding: 0px 40px 0px 40px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: 'Fira Sans', sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: 'Fira Sans', sans-serif; */
   font-weight: 700;
   font-size: 35px;
   text-decoration: none;
 }
 
-.navBarFlexContainer a .navLogo .cultureLogo {
+.navBarFlexContainer a .navLogo .Logo {
   color: #e7ba82;
   text-decoration: none;
 }

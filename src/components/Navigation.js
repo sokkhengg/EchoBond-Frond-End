@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import '../components/NavigationStyle/navigation.css'
 import { Link } from 'react-router-dom';
 import { logoutAction } from '../actions/logoutAction'
+import AskImage from "../images/home/1.png";
 
 class Navigation extends Component {
     constructor(props) {
@@ -33,7 +34,18 @@ class Navigation extends Component {
         return(
             
             <nav className="navBarFlexContainer">
-                <Link to="/"><div className="navLogo"><span className="Logo">YUC</span><span className="fitLogo"></span></div></Link>
+                <Link to="/">
+                    <div className="navLogo">
+                    
+                        <span className="Logo">YUC
+                            {/* <img
+                            src={AskImage}
+                            alt="logo mark."
+                            /> */}
+                        </span>
+                        {/* <span className="fitLogo"></span> */}
+                    </div>
+                </Link>
 
                 <div className="navBarInnerContainer">
 

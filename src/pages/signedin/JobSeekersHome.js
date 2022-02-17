@@ -42,7 +42,6 @@ class JobSeekersHome extends Component {
 
     handleClick = (quizID) => (e) => {
         e.preventDefault();
-        //console.log(this.state)
         this.setState({
             quizId: quizID.id,
             page: "quiz"
@@ -61,11 +60,11 @@ class JobSeekersHome extends Component {
         const allQuizzes = Object.entries(this.state.quizzes).map(([id,quizName])=>{
             return (
                 <div className="quizLinks" key={id}>
-                
-                <a href="/" onClick={this.handleClick({id})}>
-                <div className="quizLink">
-                        {quizName.toString()}
-                    </div></a>
+                    
+                    <a href="/" onClick={this.handleClick({id})}>
+                        <div className="quizLink">
+                            {quizName.toString()}
+                        </div></a>
                 
                 </div>
             );
@@ -76,7 +75,7 @@ class JobSeekersHome extends Component {
                 
                 {this.state.page === "quizzes" ? 
                 <div className="quizNames">
-                    <div className="selectQuiz">Choose a quiz</div> 
+                    <div className="selectQuiz">Choose any quiz</div> 
                     {allQuizzes}
                 </div>
                  

@@ -36,7 +36,7 @@ class Login extends Component {
       this.setState({
         signupError: (
           <div style={{ color: "red", marginBottom: "15px" }}>
-            *All fields must be filled out, and passwords must match
+            *Filled out the form to log in.
             <br />{" "}
           </div>
         ),
@@ -46,6 +46,9 @@ class Login extends Component {
 
   // using function inside a class function instead of using useEffect inside functional component
   submitToServer = () => {
+    /**
+     * Returns the history object from the Redux store. 
+     */
     const { history } = this.props; 
 
     return fetch("http://localhost:3000/login", {
@@ -61,8 +64,7 @@ class Login extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        //console.log("testing " + data)
-        console.log("THIS IS MY DATA vvv")
+        console.log("Data looks good")
 
         console.log(data)
         if (data.user.name === this.state.name) {
@@ -77,7 +79,7 @@ class Login extends Component {
       .catch((error) => {
         this.setState({
           signupError: (
-            <div style={{ color: "red" }}>Something went terribly wrong</div>
+            <div style={{ color: "red" }}>Try agains</div>
           ),
         });
         console.error("Error:", error);
@@ -92,8 +94,9 @@ class Login extends Component {
           {/* <h1>Sign In</h1> */}
           <br/>
           <div className="signupLoginForm">
+            <h2>Sign In</h2>
+            <p>Use your Username and Password from YUC to log in.</p>
             <form>
-              {/* <div className="signupLoginLavel">Username</div> */}
               <input
                 type="text"
                 placeholder="Username"
@@ -103,7 +106,6 @@ class Login extends Component {
               />
               <br />
 
-              {/* <div className="signupLoginLavel">Password</div> */}
               <input
                 type="password"
                 placeholder="Password"
@@ -125,7 +127,7 @@ class Login extends Component {
 
             <div>
               <br></br>
-              Don't have an account?{" "}<Link to="/signup">Sign up</Link>
+              Don't have an account yet?{" "}<Link to="/signup">Sign up</Link>
             </div>
 
           </div>

@@ -31,6 +31,10 @@ class Signup extends Component {
     );
   };
 
+  /**
+   * Checks if the password and confirm password match.
+   * True if the passwords match, false otherwise.
+   */
   passwordsMatchState = () => {
     console.log(this.state.password !== this.state.confirmpass);
     if (this.passwordsMatch()) {
@@ -46,12 +50,11 @@ class Signup extends Component {
     }
   };
 
+  /**
+   * Checks if the password and confirm password fields match.
+   * if the passwords match, false otherwise.
+   */
   passwordsMatch = () => this.state.password !== this.state.confirmpass;
-
-  /*
-    const mapStateToProps = state => ({
-        ...state
-       })*/
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -62,7 +65,7 @@ class Signup extends Component {
       this.state.password !== null &&
       !this.passwordsMatch()
     ) {
-      console.log("valid entries");
+      console.log("look good");
       this.submitToServer();
     } else {
       this.setState({
@@ -107,7 +110,7 @@ class Signup extends Component {
         this.setState({
           signupError: (
             <div style={{ color: "red", marginBottom: "15px" }}>
-              Something went wrong
+              Not looking so good
             </div>
           ),
         });
@@ -120,9 +123,10 @@ class Signup extends Component {
       <div className="signupLoginBody">
         <Navigation />
         <div className="signupLogin">
-          {/* <h1>Sign Up</h1> */}
           <br />
           <div className="signupLoginForm">
+            <h2>Sign Up</h2>
+            <p>Create your YUC Account</p>
             <form>
              
 
@@ -146,10 +150,6 @@ class Signup extends Component {
 
               <br />
 
-              
-
-              {/* <h4>Fill in input fields</h4> */}
-
               <input
                 type="text"
                 placeholder="Username / Company name"
@@ -160,7 +160,6 @@ class Signup extends Component {
               />
               <br />
 
-              {/* <div className="signupLoginLavel">Email</div> */}
               <input
                 type="text"
                 placeholder="Email"
@@ -169,9 +168,9 @@ class Signup extends Component {
                 onChange={this.handleChange}
                 label="email"
               />
-              <br />
+              <small>You can use letters, numbers & periods</small>
+              <br /><br /><br />
 
-              {/* <div className="signupLoginLavel passwordForm">Password</div> */}
               <input
                 type="password"
                 placeholder="Password"
@@ -180,9 +179,9 @@ class Signup extends Component {
                 onChange={this.handleChange}
                 label="password"
               />
+              <small> Use 6 or more characters with a mix of letters, numbers & symbols</small>
               <br />
 
-              {/* <div className="signupLoginLavel">Confirm Password</div> */}
               <input
                 type="password"
                 placeholder="confirm password"
@@ -192,7 +191,7 @@ class Signup extends Component {
                 label="confirm password"
               />
               <br />
-              {this.state.signupError}
+              {/* {this.state.signupError} */}
 
               <div className="centerSubmitButton">
                 <input

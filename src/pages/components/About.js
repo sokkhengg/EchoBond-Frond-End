@@ -7,10 +7,10 @@ const About = () => {
   return (
     <div className="aboutSectionFlex">
       <div className="aboutImage">
-        <img src={ProgrammerImage} alt="An icon of a person with a computer." />
+        <img src={ProgrammerImage} alt="questions mark." />
         <div className="aboutTitle">User</div>
         <div>
-          Pick any quiz topic you like and answer to see how you like working in the company.
+          Pick any quiz topic and answer to see how you will like working in the company.
         </div>
       </div>
 
@@ -23,10 +23,10 @@ const About = () => {
       <div className="aboutImage">
         <img
           src={AskImage}
-          alt="An icon of a speech bubble with a question mark."
+          alt="people mark."
         />
         <div className="aboutTitle">Company</div>
-        <div>Create customize quiz questions answers choice for the users.</div>
+        <div>Create quiz questions and answer choices for the users.</div>
       </div>
 
       

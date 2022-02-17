@@ -56,14 +56,16 @@ class Navigation extends Component {
                     </div>
                     :
                     <div className="navElement">
-                        <span className="signupInDivider">User | { this.props.loginReducer.name } </span>
+                        <span className="signupInDivider"> 🙎‍♂️ | { this.props.loginReducer.name } </span>
                         <span className="signupInDivider"> | </span>
                         <br/>
+                        <span className="signupInDivider"> | </span>
                         <span className="signupInDivider"><Link to="/">Home</Link> </span>
                         <span className="signupInDivider"> | </span>
                         <span className="signupInDivider"><Link to="/chat">Chat</Link> </span>
                         <span className="signupInDivider"> | </span>
                         <Link onClick={this.logout} to="/">Sign out</Link>
+                        <span className="signupInDivider"> | </span>
                     </div>
       
                   }

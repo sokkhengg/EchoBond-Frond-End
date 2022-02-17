@@ -119,7 +119,7 @@ class UserQuiz extends Component {
                 {
                     !this.state.quizComplete ? 
                         <div className="innerQuiz">
-                            <button onClick={this.props.backBtn()}>Go Back</button>
+                            <button onClick={this.props.backBtn()}>⏪</button>
                             <div>
                                 <h2>{this.state.quizName.toString()}</h2>
                             </div>

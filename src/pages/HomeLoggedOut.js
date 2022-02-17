@@ -5,9 +5,7 @@ import "./home.css";
 export const HomeLoggedOut = () => {
   return (
     <div className="gridContainer">
-      {/* <p>put some logo and welcome phrase</p> */}
       <div className="firstSection">
-        {/* <h1>Explore your up coming company.</h1> */}
       </div>
 
       <div className="secondSection"></div>
@@ -16,7 +14,7 @@ export const HomeLoggedOut = () => {
       </div>
 
       <div className="thirdSection">
-        {/* <h2>A 2021 study show that understanding what company need help employees stay longer.</h2> */}
+        {/* <p>Bring the world together and work in a place where you feel value.</p> */}
       </div>
 
       <div className="fourthSection">

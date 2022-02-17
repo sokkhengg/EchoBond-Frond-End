@@ -4,6 +4,9 @@ import JobSeekersHome from './signedin/JobSeekersHome'
 
 const HomeLoggedIn = ({userType}) => {
     return (
+        /**
+         * Renders the correct home page based on the user type.
+         */
       <>
         {userType === "job_seeker" ? (
           <JobSeekersHome />

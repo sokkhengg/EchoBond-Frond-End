@@ -182,11 +182,9 @@ class CompanyHome extends Component {
                         answers: [
                             {
                                 answer: "",
-                                // attribute: ""
                             },
                             {
                                 answer: "",
-                                // attribute: ""
                             }
                         ]
                     }

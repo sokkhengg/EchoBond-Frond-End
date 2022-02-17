@@ -29,6 +29,8 @@
   /* font-family: 'Fira Sans', sans-serif; */
   font-weight: 700;
   font-size: 35px;
+  /* background-image: url("../images/home/building.png"); */
+
   text-decoration: none;
 }
 
@@ -62,8 +64,8 @@
   font-family: Arial, Helvetica, sans-serif;
   /* font-family: 'Fira Sans', sans-serif; */
   color: #d6a364;
-  font-weight: 200;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 22px;
   text-decoration: none;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -75,7 +77,7 @@
   /* font-family: 'Fira Sans', sans-serif; */
   color: #d6a364;
   font-weight: 200;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .navBarFlexContainer .navBarInnerContainer .navElement a:hover {

@@ -25,14 +25,11 @@ class UserQuiz extends Component {
             }
         }).then((response) => response.json())
         .then(data => {
-            //console.log(data) 
-            
             this.setState({ 
                 quizName: data.custom_quiz_hash.name,
                 quizData: data.custom_quiz_hash.questions,
                 quizID: data.custom_quiz_hash.quiz_id,
                 user_attribute: ""
-                //quizzes: quizzesTemp
             })  
             console.log(this.state.quizData)
         })
@@ -45,6 +42,10 @@ class UserQuiz extends Component {
         event.preventDefault();
         let total = {}
         let userScore = []
+        /**
+         * Takes in an event and iterates through all of the elements in the event.target.elements array.
+         * If the element is checked, it will add the value of the element to the total object.
+         */
         Array.prototype.forEach.call(event.target.elements, (element) => {
             if (element.checked) {
                 let valueName = element.value
@@ -62,6 +63,7 @@ class UserQuiz extends Component {
                   score: total[key]
               })
           }
+          //send the user score and answer to user_attributes
           this.setState({
               quizAttributes: userScore
           }, () => { console.log( this.state )})
@@ -96,12 +98,14 @@ class UserQuiz extends Component {
     render() {
         const quizData = Object.entries(this.state.quizData).map(([k,value])=>{
             return (
+                //show the question
                 <div className="questionSet" key={value["question_id"]}>
                 {console.log(value["question_id"])}
                     <div key={value.question_name.question_id}>
                     {value.question_name.question}
                     </div>
                     {
+                //show the answer choices
                     Object.entries(value.answers).map(([answerKey, answerValue]) => {
                         return <div className="answers" key={answerKey}>
                         <input type="radio" id={answerValue.answer_name.answer} name={value.question_id} value={answerValue.answer_attribute.answer_attribute} key={answerValue.answer_name.answer_id}/>
@@ -131,7 +135,7 @@ class UserQuiz extends Component {
                         </div>
                     :
                     <div className="innerQuiz">
-                        <h2>Survey complete</h2>
+                        <h2>Submitted successfully🎉🎉🎉</h2>
                         <button onClick={this.props.backBtn()}>Go Back</button>
                     </div>
                 }

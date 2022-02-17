@@ -75,7 +75,7 @@ class JobSeekersHome extends Component {
                 
                 {this.state.page === "quizzes" ? 
                 <div className="quizNames">
-                    <div className="selectQuiz">Choose any quiz</div> 
+                    <div className="selectQuiz">Pick any Topic</div> 
                     {allQuizzes}
                 </div>
                  

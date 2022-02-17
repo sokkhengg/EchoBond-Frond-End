@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import './company.css'
 import './userquiz.css';
 import QuizScores from './components/QuizScores.js';
-import QuizContainer from "./QuizContainer"
+// import QuizContainer from "./QuizContainer"
 
 class CompanyHome extends Component {
     constructor(props) {
@@ -82,11 +82,11 @@ class CompanyHome extends Component {
             answers: [
                 {
                     answer: "",
-                    attribute: ""
+                    // attribute: ""
                 },
                 {
                     answer: "",
-                    attribute: ""
+                    // attribute: ""
                 }
             ]
         }
@@ -102,7 +102,7 @@ class CompanyHome extends Component {
         
         let newAnswer = {
             answer: "",
-            attribute: ""
+            // attribute: ""
         }
 
         questions[index].answers = [...questions[index].answers, newAnswer]
@@ -127,7 +127,6 @@ class CompanyHome extends Component {
     answerHandleChange = (qIndex, aIndex) => (event) => {
         let questions = [...this.state.questions];
         questions[qIndex].answers[aIndex].answer = event.target.value;
-        //console.log(questions)
         this.setState({
             questions
         }, () => { 
@@ -138,7 +137,6 @@ class CompanyHome extends Component {
     attributeHandleChange = (qIndex, aIndex) => (event) => {
         let questions = [...this.state.questions];
         questions[qIndex].answers[aIndex].attribute = event.target.value;
-        //console.log(questions)
         this.setState({
             questions
         }, () => { 
@@ -163,7 +161,6 @@ class CompanyHome extends Component {
             questions: this.state.questions
         }
         event.preventDefault();
-        //console.log("Click")
         return fetch('http://localhost:3000/quizzes', {
             method: "post",
             headers: {
@@ -176,7 +173,7 @@ class CompanyHome extends Component {
         }).then((response) => {
             this.setState({
                 username: this.props.loginReducer.name,
-                formData: <div style={{ color: "black", marginBottom: "15px", textAlign: "center" }}>Quiz submitted</div>,
+                formData: <div style={{ color: "black", marginBottom: "15px", textAlign: "center" }}>Submitted successfully🎉🎉🎉</div>,
                 quizSubmitted: true,
                 quizTitle: "",
                 questions: [
@@ -185,11 +182,11 @@ class CompanyHome extends Component {
                         answers: [
                             {
                                 answer: "",
-                                attribute: ""
+                                // attribute: ""
                             },
                             {
                                 answer: "",
-                                attribute: ""
+                                // attribute: ""
                             }
                         ]
                     }
@@ -233,31 +230,26 @@ class CompanyHome extends Component {
         const quizData = this.state.questions.map((quest, index) => {
             return (
                 <div key={index}>
-                    {/* <div>
-                        <label>Question:</label>
-                    </div> */}
                     <div>
+                        <small>put some catchy name for your quiz title</small>
+                        <br/><br/>
                         <input onChange={this.questionHandleChange(index)} placeholder="Question"/>
+                        <small>Ask something nice</small>
+                        <br/><br/>
                     </div>
                     
                     {
                         quest.answers.map((answ, aindex) => {
                             return (
                                 <div className="answers" key={aindex}> 
-                                    {/* <div>
-                                        <label>Answer:</label>
-                                    </div> */}
                                     <div>
                                         <input onChange={this.answerHandleChange(index, aindex)} placeholder="Answer"/>
                                     </div>
-                                    <div className="attribute">
-                                        {/* <div>
-                                            <label>Answer Attribute:</label>
-                                        </div> */}
+                                    {/* <div className="attribute">
                                         <div>
                                             <input onChange={this.attributeHandleChange(index, aindex)} placeholder="Answer Attribute"/>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             )
                         })
@@ -266,22 +258,6 @@ class CompanyHome extends Component {
                 </div>
             )
         })
-
-        // const uniqueQuizzes = this.state.uniqueQuizList.map((quiz) => { return (
-        //     <div className="quizLinks" key={quiz["id"]}>
-        //     {console.log(quiz["quiz"])}
-                
-        //         <a href="/" onClick={this.viewUniqueQuiz(quiz["quiz"]["custom_quiz_hash"]["quiz_id"])}>
-        //             {
-        //                 console.log(quiz["quiz"]["custom_quiz_hash"]["quiz_id"])
-                    
-        //             }
-        //             <div className="quizLink">
-        //                 {quiz["quiz"]["custom_quiz_hash"]["name"].toString()}
-        //             </div>
-        //         </a>
-        //     </div>
-        // )})
 
         return(
             <div className="companyHome">
@@ -292,20 +268,17 @@ class CompanyHome extends Component {
                         {
                             this.state.quizSubmitted === false ? 
                             <div className="createQuizInner">
-                                {/* <h2>Add a quiz</h2> */}
                                 <div>
-                                <div>
-                                    {/* <div>
-                                        <label>Survey Title:</label>
-                                    </div> */}
                                     <div>
-                                        <input onChange={this.titleHandleChange()} placeholder="Quiz Title"/>
+                                        <div>
+                                            <h3>Create as many qustions and anwser as you like.</h3>
+                                            <input onChange={this.titleHandleChange()} placeholder="Quiz Title"/>
                                     </div>
                                 </div>
                                 {quizData}
                                 <button className="addBtn"  onClick={this.addQuestionBtn()}>Add Question</button>
                                 </div>
-                                <button onClick={this.handleSubmit()} className="submitBtn">Submit Survey</button> 
+                                <button onClick={this.handleSubmit()} className="submitBtn">Submit</button> 
                             </div>
                             :
                             <div className="createQuizInner">

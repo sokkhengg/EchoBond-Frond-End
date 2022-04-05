@@ -82,11 +82,9 @@ class CompanyHome extends Component {
             answers: [
                 {
                     answer: "",
-                    // attribute: ""
                 },
                 {
                     answer: "",
-                    // attribute: ""
                 }
             ]
         }
@@ -102,7 +100,6 @@ class CompanyHome extends Component {
         
         let newAnswer = {
             answer: "",
-            // attribute: ""
         }
 
         questions[index].answers = [...questions[index].answers, newAnswer]

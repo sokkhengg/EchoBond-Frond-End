@@ -8,8 +8,6 @@ export function submitPost(user, message) {
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
             "Content-Type": "application/json",
-            // "Access-Control-Allow-Headers": "Authorization",
-            // "Accept": "application/json"
         },
         body: JSON.stringify({
             user: user, 
